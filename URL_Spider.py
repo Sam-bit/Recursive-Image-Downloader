@@ -54,7 +54,7 @@ def DownloadImages(folderpath,url, level=0,FromSameDomain=True): # the root URL 
 		linkUrls = re.findall('<a .*?href="(.*?)"', urlContent)
 		if len(linkUrls) > 0:
 			for linkUrl in linkUrls:
-				downloadImages(os.path.join(folderpath,title),linkUrl, level - 1)
+				DownloadImages(os.path.join(folderpath,title),linkUrl, level - 1)
 
 # main
 url = 'http://www.google.co.in/'
